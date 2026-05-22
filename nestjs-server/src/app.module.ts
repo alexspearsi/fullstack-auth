@@ -6,6 +6,8 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { PrismaService } from './prisma/prisma.service';
 import { ProviderModule } from './auth/provider/provider.module';
+import { MailModule } from './libs/mail/mail.module';
+import { PasswordRecoveryModule } from './auth/password-recovery/password-recovery.module';
 
 @Module({
   imports: [
@@ -17,7 +19,9 @@ import { ProviderModule } from './auth/provider/provider.module';
     PrismaModule,
     AuthModule,
     UserModule,
-    ProviderModule
+    ProviderModule,
+    MailModule,
+    PasswordRecoveryModule,
   ],
   providers: [PrismaService]
 })
