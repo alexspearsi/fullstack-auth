@@ -8,6 +8,7 @@ import { PrismaService } from './prisma/prisma.service';
 import { ProviderModule } from './auth/provider/provider.module';
 import { MailModule } from './libs/mail/mail.module';
 import { PasswordRecoveryModule } from './auth/password-recovery/password-recovery.module';
+import { TwoFactorAuthModule } from './two-factor-auth/two-factor-auth.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { PasswordRecoveryModule } from './auth/password-recovery/password-recove
     ProviderModule,
     MailModule,
     PasswordRecoveryModule,
+    TwoFactorAuthModule,
   ],
   providers: [PrismaService]
 })
